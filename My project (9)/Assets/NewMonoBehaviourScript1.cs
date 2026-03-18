@@ -7,10 +7,13 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
     public float movespeed = 15f;
     public float jumpForce = 10f;
     private Rigidbody2D rb;
+    private Animator myAnimator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        myAnimator.SetBool("move", false);
     }
     public void OnMove(InputValue value)
     {
@@ -38,6 +41,15 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        transform.Translate(Vector3.right *movespeed * moveInput.x * Time.deltaTime);
+
+        if (moveInput.magnitude > 0)
+        {
+            myAnimator.SetBool("move", true);
+        }
+        else
+        {
+            myAnimator.SetBool("move", false);
+        }
+            transform.Translate(Vector3.right * movespeed * moveInput.x * Time.deltaTime);
     }
 }
