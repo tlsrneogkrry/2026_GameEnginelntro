@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript1 : MonoBehaviour
 {
@@ -8,6 +9,19 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
     public float jumpForce = 10f;
     private Rigidbody2D rb;
     private Animator myAnimator;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "Death")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            SceneManager.LoadScene("PlayScene_" + collision.name);
+        }
+           
+    }
 
     private void Start()
     {
