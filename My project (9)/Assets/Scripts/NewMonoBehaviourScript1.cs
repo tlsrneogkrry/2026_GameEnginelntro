@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class NewMonoBehaviourScript1 : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
     public float jumpForce = 10f;
     private Rigidbody2D rb;
     private Animator myAnimator;
+
+    float score;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,7 +23,17 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
         {
             SceneManager.LoadScene("PlayScene_" + collision.name);
         }
-           
+
+        if (collision.CompareTag("Finish"))
+        {
+            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+        }
+
+        if (collision.CompareTag("Item"))
+        {
+            score += 10f;
+            Destroy(collision.gameObject);
+        } 
     }
 
     private void Start()
@@ -28,6 +41,7 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myAnimator.SetBool("move", false);
+        score = 0f;
     }
     public void OnMove(InputValue value)
     {

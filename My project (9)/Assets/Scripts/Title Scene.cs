@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class TitleScene : MonoBehaviour
 {
     public GameObject helpPanel;
+    public GameObject LeaderBoardPanel;
 
     public void OutButton()
     {
@@ -32,6 +33,16 @@ public class TitleScene : MonoBehaviour
     public void CloseHelp()
     {
         helpPanel.SetActive(false);
+    }
+
+    public void OpenLeaderBoard()
+    {
+        LeaderBoardPanel.SetActive(true);
+    }
+
+    public void CloseLeaderBoard()
+    {
+        LeaderBoardPanel.SetActive(false);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

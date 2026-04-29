@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 241601170}
   m_Layer: 0
   m_Name: Door 1
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,8 +1347,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD0C0\uC774\uD2C0\uB85C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 43c2216e7739b9c439cf8f5d879a7942, type: 2}
-  m_sharedMaterial: {fileID: 7281373188781122972, guid: 43c2216e7739b9c439cf8f5d879a7942, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a975cef1400069348ae2e04f4b3e5349, type: 2}
+  m_sharedMaterial: {fileID: -5848505514594005145, guid: a975cef1400069348ae2e04f4b3e5349, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
