@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class NewMonoBehaviourScript1 : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private Vector2 moveInput;
     public float movespeed = 15f;
@@ -15,25 +15,26 @@ public class NewMonoBehaviourScript1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Death")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else
-        {
-            SceneManager.LoadScene("PlayScene_" + collision.name);
-        }
-
         if (collision.CompareTag("Finish"))
         {
-            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+            //HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+            StageResultSaver.SaveStage(SceneManager.GetActiveScene().buildIndex, (int)score);
+
+            SceneManager.LoadScene("PlayScene_" + collision.name);
+            return;
         }
 
         if (collision.CompareTag("Item"))
         {
-            score += 10f;
+            score += collision.GetComponent<ItemObject>().GetPoint();
             Destroy(collision.gameObject);
-        } 
+            return;
+        }
+        if (collision.name == "Death")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
     }
 
     private void Start()

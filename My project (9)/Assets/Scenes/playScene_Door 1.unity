@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 93117465}
   - component: {fileID: 93117464}
   - component: {fileID: 93117463}
+  - component: {fileID: 93117467}
   m_Layer: 0
   m_Name: Item  (2)
   m_TagString: Item
@@ -285,6 +286,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &93117467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93117462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db140a3045d9dba46aef2ae177965d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemObject
+  data: {fileID: 11400000, guid: 148ba5f6e78473445ad966841bd349e0, type: 2}
 --- !u!1 &152875668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,6 +2294,7 @@ GameObject:
   - component: {fileID: 1451697082}
   - component: {fileID: 1451697081}
   - component: {fileID: 1451697080}
+  - component: {fileID: 1451697084}
   m_Layer: 0
   m_Name: 'Item '
   m_TagString: Item
@@ -2434,6 +2449,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1451697084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451697079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db140a3045d9dba46aef2ae177965d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemObject
+  data: {fileID: 11400000, guid: 148ba5f6e78473445ad966841bd349e0, type: 2}
 --- !u!1 &1548473153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScene
   helpPanel: {fileID: 0}
+  LeaderBoardPanel: {fileID: 0}
 --- !u!4 &1797961306
 Transform:
   m_ObjectHideFlags: 0
@@ -3189,6 +3218,7 @@ GameObject:
   - component: {fileID: 2055763724}
   - component: {fileID: 2055763723}
   - component: {fileID: 2055763722}
+  - component: {fileID: 2055763726}
   m_Layer: 0
   m_Name: Item  (1)
   m_TagString: Item
@@ -3343,6 +3373,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2055763726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055763721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db140a3045d9dba46aef2ae177965d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemObject
+  data: {fileID: 11400000, guid: 148ba5f6e78473445ad966841bd349e0, type: 2}
 --- !u!1 &2073662096
 GameObject:
   m_ObjectHideFlags: 0

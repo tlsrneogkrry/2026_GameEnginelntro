@@ -6,6 +6,7 @@ public class TitleScene : MonoBehaviour
 {
     public GameObject helpPanel;
     public GameObject LeaderBoardPanel;
+    
 
     public void OutButton()
     {
@@ -44,6 +45,8 @@ public class TitleScene : MonoBehaviour
     {
         LeaderBoardPanel.SetActive(false);
     }
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
